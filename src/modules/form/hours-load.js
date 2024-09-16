@@ -11,7 +11,6 @@ export function hoursLoad({date, dailySchedules}){
 
     const unavailableHours = dailySchedules.map((schedule) => dayjs(schedule.when).format("HH:mm"))
 
-    console.log(unavailableHours)
     const opening = openingHours.map((hour) => {
         const [scheduleHour] = hour.split(":")
         
@@ -19,7 +18,6 @@ export function hoursLoad({date, dailySchedules}){
         const isHourPast = dayjs(date).add(scheduleHour, "hour").isBefore(dayjs())
         
         const available = !unavailableHours.includes(hour) && !isHourPast
-        console.log(available, hour, isHourPast, scheduleHour, date)
         
         return{
             hour,
