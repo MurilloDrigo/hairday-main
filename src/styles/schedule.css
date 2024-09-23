@@ -1,4 +1,5 @@
 .schedule {
+  background-color: #F4F1F2;
   grid-area: schedule;
   padding: 5rem 7.75rem;
 }

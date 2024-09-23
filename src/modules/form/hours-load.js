@@ -30,15 +30,7 @@ opening.forEach(({hour, available})=> {
     li.classList.add("hour")
     li.classList.add(available ? "hour-available": "hour-unavailable" )
     li.textContent = hour
-    if(hour === "9:00"){
-        hourHaderAdd("Manhã")
-    }
-    else if(hour ==="13:00"){
-        hourHaderAdd("Tarde")
-    }
-    else if(hour ==="18:00"){
-        hourHaderAdd("Noite")
-    }
+    hourHaderAdd("Manhã")
     hours.append(li)
 })
 hoursClick()

@@ -18,12 +18,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #b8952e;
+  background: #D658B3;
 }
 
 body {
-  background-color: #19181b;
-  color: #f5f4f5;
+  background-color: #DFDCDF;
+  color: #332B31;
 }
 
 .container {
@@ -36,16 +36,11 @@ body {
 }
 
 .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  background-color: #2e2c30;
+  max-width: 116px;
+  max-height: 56;
   padding: 0.75rem 1.25rem;
   border-bottom-right-radius: 0.75rem;
 
-  height: 3.5rem;
-  width: 8.7rem;
 }
 
 @media (max-width: 1100px) {

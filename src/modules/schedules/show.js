@@ -2,8 +2,7 @@ import dayjs from "dayjs";
 
 // Seleciona as seções Manhã, Tarde e Noite
 const periodMorning = document.getElementById("period-morning")
-const periodAfternoon = document.getElementById("period-afternoon")
-const periodNight = document.getElementById("period-night")
+
 
 export function scheduleShow({ dailySchedules }){
     try {
@@ -21,22 +20,13 @@ export function scheduleShow({ dailySchedules }){
         time.textContent = dayjs(schedule.when).format("HH:mm")
         name.textContent = schedule.name
         
-        const cancelIcon = document.createElement("img")
-        cancelIcon.classList.add("cancel-icon")
-        cancelIcon.setAttribute("src","./src/assets/cancel.svg")
-        cancelIcon.setAttribute("alt", "Cancelar")
 
-        item.append(time, name, cancelIcon)
+        item.append(time, name)
 
         const hour = dayjs(schedule.when).hour()
 
-        if(hour <= 12 ){
-            periodMorning.appendChild(item)
-        } else if ( hour > 12 && hour <= 18){
-            periodAfternoon.appendChild(item)
-        } else {
-            periodNight.appendChild(item)
-        }
+        periodMorning.appendChild(item)
+        
         
         
         })
